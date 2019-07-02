@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'student.apps.StudentConfig',
     'faculty.apps.FacultyConfig',
+    'login.apps.LoginConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -86,17 +87,6 @@ DATABASES = {
         'PORT': '',
     }
 }
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'USER': 'root',
-#        'PASSWORD': 'satainder334',
-#        'NAME': 'taportal',
-#        'HOST': 'localhost',
-#        'PORT': '',
-#    }
-#}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
