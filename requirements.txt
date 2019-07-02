@@ -1,0 +1,4 @@
+Django
+django_mysql
+mysqlclient
+django-jet
