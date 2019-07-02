@@ -76,27 +76,27 @@ WSGI_APPLICATION = 'TA_PORTAL.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'USER': 'ugacademics',
-#        'PASSWORD': 'ug_acads',
-#        'NAME': 'ugacademics',
-#        'HOST': '10.105.177.5',
-#        'PORT': '',
-#    }
-#}
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'root',
-        'PASSWORD': 'satainder334',
-        'NAME': 'taportal',
-        'HOST': 'localhost',
+        'USER': 'ugacademics',
+        'PASSWORD': 'ug_acads',
+        'NAME': 'ugacademics',
+        'HOST': '10.105.177.5',
         'PORT': '',
     }
 }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'USER': 'root',
+#        'PASSWORD': 'satainder334',
+#        'NAME': 'taportal',
+#        'HOST': 'localhost',
+#        'PORT': '',
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
