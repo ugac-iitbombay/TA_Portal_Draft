@@ -1,9 +1,92 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <h1>Login Page</h1>
-    </body>
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>UGAC | TA Portal	</title>
+	<link rel="shortcut icon" type="image/png" href="../../static/login/images/login/favicon.png"/>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="UGAC | TA Portal" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+
+	<!-- css files -->
+	<link rel="stylesheet" href="static/login/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Style-CSS -->
+	<link href="static/login/font-awesome.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext"
+	 rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body>
+	<div class="main-bg">
+		<nav class="navbar navbar-light" style="background-color: #00ad45;">
+			<span class="navbar-brand mb-0 h1">TA Selection Portal</span>
+		  </nav>
+		<div class="sub-main-w3">
+			<!-- vertical tabs -->
+			<div class="vertical-tab">
+				<div id="section1" class="section-w3ls">
+					<input type="radio" name="sections" id="option1" checked>
+					<label for="option1" class="icon-left-w3pvt"  style="height: 143px;"><span class="fa fa-users" aria-hidden="true"></span>Student Login</label>
+					<article>
+						<form action="#" method="post" style="padding-top: 15px;">
+							<h3 class="legend">Login Here</h3>
+							<div class="input">
+								<span class="fa fa-envelope-o" aria-hidden="true"></span>
+								<input type="email" placeholder="LDAP ID" name="email" required />
+							</div>
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="password" placeholder="Password" name="password" required />
+							</div>
+							<button type="submit" class="btn submit">Login</button>
+						</form>
+					</article>
+				</div>
+
+				<div id="section2" class="section-w3ls">
+					<input type="radio" name="sections" id="option2">
+					<label for="option2" class="icon-left-w3pvt" style="height: 143px;"><span class="fa fa-user" aria-hidden="true"></span>Faculty Login</label>
+					<article>
+						<form action="#" method="post" style="padding-top: 15px;">
+							<h3 class="legend">Login Here</h3>
+							<div class="input">
+								<span class="fa fa-envelope-o" aria-hidden="true"></span>
+								<input type="email" placeholder="LDAP ID" name="email" required />
+							</div>
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="password" placeholder="Password" name="password" required />
+							</div>
+							<button type="submit" class="btn submit">Login</button>
+						</form>
+					</article>
+				</div>
+			</div>
+			<!-- //vertical tabs -->
+			<div class="clear"></div>
+		
+		</div>
+
+		<nav class="navbar" style="background-color: #00ad45; bottom: 0px;">
+			<span class="navbar-brand mb-0 h1">In case of any problems with the portal, or any bugs, please <a href="mailto:web.nom.ug@gmail.com" target="_blank">Click here</a></span>
+		  </nav>
+</body>
+
 </html>
