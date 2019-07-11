@@ -3,11 +3,12 @@
 
 <head>
 	<title>UGAC | TA Portal	</title>
-	<link rel="shortcut icon" type="image/png" href="../../static/login/images/login/favicon.png"/>
+	<link rel="shortcut icon" type="image/png" href="../../static/images/login/favicon.png"/>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
-	<meta name="keywords" content="UGAC | TA Portal" />
+	<meta name="keywords" content="IITB, UG academics, IITBTA, IITB TA Portal /">
+
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -20,10 +21,10 @@
 	<!-- Meta tag Keywords -->
 
 	<!-- css files -->
-	<link rel="stylesheet" href="static/login/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../../static/style.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Style-CSS -->
-	<link href="static/login/font-awesome.min.css" rel="stylesheet">
+	<link href="../../static/font-awesome.min.css" rel="stylesheet">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //css files -->
 
@@ -45,15 +46,18 @@
 					<input type="radio" name="sections" id="option1" checked>
 					<label for="option1" class="icon-left-w3pvt"  style="height: 143px;"><span class="fa fa-users" aria-hidden="true"></span>Student Login</label>
 					<article>
-						<form action="#" method="post" style="padding-top: 15px;">
+						<form action="/post/" method="POST" style="padding-top: 15px;">
+							{% csrf_token %}
 							<h3 class="legend">Login Here</h3>
 							<div class="input">
 								<span class="fa fa-envelope-o" aria-hidden="true"></span>
-								<input type="email" placeholder="LDAP ID" name="email" required />
+								{{ form.ldap }}
+								<!--<input type="email" placeholder="LDAP ID" name="email" required />-->
 							</div>
 							<div class="input">
 								<span class="fa fa-key" aria-hidden="true"></span>
-								<input type="password" placeholder="Password" name="password" required />
+								{{ form.password }}
+								<!--<input type="password" placeholder="Password" name="password" required />-->
 							</div>
 							<button type="submit" class="btn submit">Login</button>
 						</form>
@@ -65,14 +69,17 @@
 					<label for="option2" class="icon-left-w3pvt" style="height: 143px;"><span class="fa fa-user" aria-hidden="true"></span>Faculty Login</label>
 					<article>
 						<form action="#" method="post" style="padding-top: 15px;">
+							{% csrf_token %}
 							<h3 class="legend">Login Here</h3>
 							<div class="input">
 								<span class="fa fa-envelope-o" aria-hidden="true"></span>
-								<input type="email" placeholder="LDAP ID" name="email" required />
+								{{ form.ldap }}
+								<!--<input type="email" placeholder="LDAP ID" name="email" required />-->
 							</div>
 							<div class="input">
 								<span class="fa fa-key" aria-hidden="true"></span>
-								<input type="password" placeholder="Password" name="password" required />
+								{{ form.password }}
+								<!--<input type="password" placeholder="Password" name="password" required />-->
 							</div>
 							<button type="submit" class="btn submit">Login</button>
 						</form>
