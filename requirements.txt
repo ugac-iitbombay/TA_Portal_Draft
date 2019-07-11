@@ -2,3 +2,5 @@ Django
 django_mysql
 mysqlclient
 django-jet
+python-ldap 
+django-auth-ldap
