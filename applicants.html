@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<title>Faculty-Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+<style>
+html{ height:100%; }
+body{ min-height:100%; padding:0; margin:0; position:relative; }
+.wrapper {
+    text-align: center;
+}
+body::after{ content:''; display:block; height:100px; }
+
+footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:100px;
+}
+button{
+  margin:auto;
+  display:block;
+}
+
+/* BUTTON STYLES */
+button{
+  top = 50%;
+  padding:16px 32px;
+  font-family:helvetica;
+  font-size:16px;
+  font-weight:100;
+  color:#fff;
+  background: #587286;
+  border:0;
+  font-weight:100;
+}
+button:hover{
+  background: #3B5C76;
+}
+/* END OF BUTTON STYLES */
+.button4 {border-radius: 12px;}
+/* Accordion */
+button.accordion {
+background-color: #0080ff;
+color: #000000;
+border-radius: 7px;
+cursor: pointer;
+padding: 8px;
+width: 100%;
+margin: 4px 0;
+text-align: left;
+border: none;
+outline: none;
+transition: 0.3s;
+}
+
+button.accordion:hover {
+background-color: #004080;
+color: rgba(255,255,255,0.56);
+}
+
+button.accordion.active {
+background-color: #0080ff;
+color: #000000;
+border-radius: 7px 7px 0 0;
+margin: 1px 0 0;
+}
+
+div.panel {
+background-color: #80ffff;
+color: #000000;
+border-radius: 0 0 7px 7px;
+margin: 0;
+padding:0 8px;
+max-height: 0;
+overflow: hidden;
+transition: 0.3s;
+opacity: 0;
+}
+
+div.panel.show {
+margin: 7px 0 1px;
+padding: 8px;
+opacity: 1;
+max-height: 500px;
+}
+}
+
+</style>
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="addcourse.html" class="w3-bar-item w3-button">Add Courses</a>
+  <a href="applicants.html" class="w3-bar-item w3-button">Applicants</a>
+</div>
+
+<div id="main">
+
+<div class="w3-black">
+  <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container w3-center">
+    <h1>TA Application Portal</h1>
+  </div>
+</div>
+<div class=" w3-container w3-center">
+<h1 class="w3-text-black">List of Applicants</h1>
+<button class="accordion">
+Course no - Course name:
+</button>
+<div class="panel">
+<div class = 'w3-left'>Generate the list
+<!--Generate a list. Need suggestions on how to do it!!!!-->
+</div>
+</div>
+
+
+</div>
+</div>
+<footer>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Desgined by UGAC, IIT Bombay</p>
+      <p>Logout</p><!--Add link for logging out-->
+
+    </div>
+  </footer>
+
+<script>
+
+  var accordions = document.querySelectorAll("button.accordion");
+for (var i = 0; i < accordions.length; i++) {
+accordions[i].onclick = function(){
+this.classList.toggle("active");
+this.nextElementSibling.classList.toggle("show");
+}
+}
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>

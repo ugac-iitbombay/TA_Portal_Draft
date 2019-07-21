@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Faculty-Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+<style>
+html{ height:100%; }
+body{ min-height:100%; padding:0; margin:0; position:relative; }
+.wrapper {
+    text-align: center;
+}
+body::after{ content:''; display:block; height:100px; }
+
+footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:100px;
+}
+button{
+  margin:auto;
+  display:block;
+}
+
+/* BUTTON STYLES */
+button{
+  top = 50%;
+  padding:16px 32px;
+  font-family:helvetica;
+  font-size:16px;
+  font-weight:100;
+  color:#fff;
+  background: #587286;
+  border:0;
+  font-weight:100;
+}
+button:hover{
+  background: #3B5C76;
+}
+/* END OF BUTTON STYLES */
+.button4 {border-radius: 12px;}
+
+</style>
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="home.html" class="w3-bar-item w3-button">Home</a>
+  <a href="addcourse.html" class="w3-bar-item w3-button">Add Courses</a>
+  <a href="applicants.html" class="w3-bar-item w3-button">Applicants</a>
+</div>
+
+<div id="main">
+
+<div class="w3-black">
+  <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container w3-center">
+    <h1>TA Application Portal</h1>
+  </div>
+</div>
+<div class=" w3-container w3-center">
+<h1 class="w3-text-black">Add a new Course</h1>
+<form method="post">
+  Course Number:<br> <div align = 'w3-center'><input type="text" name="course_no"></div>
+  <br><br>
+  Course Name:<br><div align = 'w3-center'> <input type="text" name="name"></div>
+  <br><br>
+  Course Details:<br>
+  <textarea rows = "5" cols = "30" name = "description"></textarea>
+
+  <br><br>
+  <br><br>
+  <input type="submit" name="submit" value="Submit"><!-- add code of django-->
+
+</div>
+</form>
+
+
+
+
+</div>
+</div>
+<footer>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Desgined by UGAC, IIT Bombay</p>
+      <p>Logout</p><!--Add link for logging out-->
+
+    </div>
+  </footer>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>
